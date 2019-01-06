@@ -3,6 +3,7 @@ import java.io.*;
 import javax.swing.JOptionPane;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.Scanner;
 
 /**
  *
@@ -13,9 +14,11 @@ public class CalculadoraEdad {
     public static void main(String[] args) {
         int edad;
         int añoN;
+        // se crea la instancia de Scanner para leer la edad de una persona ingresada por teclado.
+        Scanner teclado=new Scanner(System.in);
+        añoN= teclado.nextInt();
         
-       
-        edad=calcular(new GregorianCalendar(1994, 02, 14));
+        edad=calcular(new GregorianCalendar(añoN, 02, 14));
         JOptionPane.showMessageDialog(null, "archivo edad.txt\n" +"GUARDADO CORRECTAMENTE");
         escribir("edad.txt",edad);
         
